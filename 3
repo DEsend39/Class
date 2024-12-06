@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a, b;
+    int *ptr_a, *ptr_b;
+    
+    std::cout << "Введите два числа"  ;
+    std::cin >> a >> b ;
+    
+    ptr_a = &a;
+    ptr_b = &b;
+    
+    int temp = *ptr_a;
+    *ptr_a = *ptr_b;
+    *ptr_b = temp;
+    
+    std::cout << "После обмена а = " << *ptr_a << ", b = " << *ptr_b << std::endl;
+    
+}
