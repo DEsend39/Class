@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int num;
+  int *ptr_num; 
+
+  cout << "Введите число: ";
+  cin >> num;
+
+  ptr_num = &num; 
+
+  if (*ptr_num > 0) {
+    cout << "Знак числа: +" << endl;
+  } else if (*ptr_num < 0) {
+    cout << "Знак числа: -" << endl;
+  } else {
+    cout << "Знак числа: 0" << endl;
+  }
+
+  return 0;
+}
