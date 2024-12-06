@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double num1, num2, *ptr_num1, *ptr_num2, result;
+    char op;
+    
+    std::cout << "первое число: \n";
+    std::cin >> num1;
+    std::cout << "Второе число: \n";
+    std::cin >> num2;
+    std::cout << "Операция ( +, - , *, /) \n";
+    std::cin >> op;
+    
+    ptr_num1 = &num1;
+    ptr_num2 = &num2;
+    
+    switch (op) {
+        case '+':
+            result = *ptr_num1 + *ptr_num2;
+            break;
+        case '-':
+            result = *ptr_num1 - *ptr_num2;
+            break;
+        case '*':
+            result = *ptr_num1 * *ptr_num2;
+            break;
+        case '/':
+            if (*ptr_num2 == 0) {
+                cout << "Ошибка: деление на ноль!" << std::endl;
+                return 1; 
+            }
+            result = *ptr_num1 / *ptr_num2;
+            break;
+        default:
+            cout << "Ошибка: неверная операция!" << std::endl;
+            return 1;
+    }
+
+    cout << "Результат: " << result << std::endl;
+            
+    
+    
+}
